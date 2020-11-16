@@ -1,0 +1,8 @@
+version: 2.1
+jobs:
+  build:
+    macos:
+      xcode: 11.6.0
+    steps:
+      - checkout
+      - run: xcodebuild -version
