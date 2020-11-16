@@ -1,8 +1,9 @@
 version: 2.1
+orbs:
+  win: circleci/windows@2.2.0
 jobs:
   build:
-    macos:
-      xcode: 11.6.0
+    executor: win/default
     steps:
       - checkout
-      - run: xcodebuild -version
+      - run: 'Write-Host "Hello, Windows"'
